@@ -1,0 +1,8 @@
+steps:
+  - name: python:3.11
+    entrypoint: bash
+    args: ["-c", "pip install -e '.[dev]' && ruff check src tests frontend && pytest"]
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/retailpulse:$COMMIT_SHA", "."]
+images:
+  - "gcr.io/$PROJECT_ID/retailpulse:$COMMIT_SHA"

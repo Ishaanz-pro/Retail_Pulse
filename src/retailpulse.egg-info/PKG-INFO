@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: retailpulse
+Version: 0.1.0
+Summary: Local-first retail and supply-chain data intelligence platform
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: uvicorn[standard]<1,>=0.30
+Requires-Dist: pydantic-settings<3,>=2.6
+Requires-Dist: pandas<3,>=2.2
+Requires-Dist: numpy<3,>=1.26
+Requires-Dist: scikit-learn<2,>=1.5
+Requires-Dist: joblib<2,>=1.4
+Requires-Dist: plotly<6,>=5.24
+Requires-Dist: streamlit<2,>=1.40
+Requires-Dist: python-dotenv<2,>=1.0
+Provides-Extra: cloud
+Requires-Dist: google-cloud-bigquery<4,>=3.25; extra == "cloud"
+Requires-Dist: google-cloud-pubsub<3,>=2.27; extra == "cloud"
+Requires-Dist: google-cloud-storage<3,>=2.18; extra == "cloud"
+Requires-Dist: apache-beam[gcp]<3,>=2.60; extra == "cloud"
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=8.3; extra == "dev"
+Requires-Dist: httpx<1,>=0.27; extra == "dev"
+Requires-Dist: ruff<1,>=0.8; extra == "dev"
+Requires-Dist: pyarrow<19,>=18; extra == "dev"
+Dynamic: license-file

@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+data/raw/*
+data/processed/*
+data/*.db
+models/*
+!models/.gitkeep
+*.jsonl
+*.parquet
+credentials/
+*-service-account.json
+.DS_Store
